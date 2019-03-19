@@ -3,9 +3,21 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:modern_weather/main.dart';
 
 void main() {
+  const String _title = 'Flutter Demo Home Page';
+  const String _body = 'body';
+
+  testWidgets('MyApp renders and have a title and a body',
+      (WidgetTester tester) async {
+    await tester.pumpWidget(MyApp());
+
+    final Finder widgetTitle = find.text('Flutter Demo Home Page');
+    final Finder widgetBody = find.text('body');
+
+    expect(widgetTitle, findsOneWidget);
+    expect(widgetBody, findsOneWidget);
+  });
+
   testWidgets('MyHomePage was rendered', (WidgetTester tester) async {
-    const String _title = 't';
-    const String _body = 'b';
     const Key _key = Key('k');
 
     await tester.pumpWidget(MaterialApp(
