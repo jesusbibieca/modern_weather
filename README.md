@@ -1,6 +1,4 @@
-[![Build Status](https://app.bitrise.io/app/eb18756dca13ce2a/status.svg?token=9oKmzq433Vt7RtIBq7Je3A&branch=master)](https://app.bitrise.io/app/eb18756dca13ce2a)
-
-[![codecov](https://codecov.io/gh/jesusbibieca/modern_weather/branch/master/graph/badge.svg)](https://codecov.io/gh/jesusbibieca/modern_weather)
+[![Build Status](https://app.bitrise.io/app/eb18756dca13ce2a/status.svg?token=9oKmzq433Vt7RtIBq7Je3A&branch=master)](https://app.bitrise.io/app/eb18756dca13ce2a) [![codecov](https://codecov.io/gh/jesusbibieca/modern_weather/branch/master/graph/badge.svg)](https://codecov.io/gh/jesusbibieca/modern_weather)
 
 # Modern Weather
 
