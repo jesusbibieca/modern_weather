@@ -8,6 +8,10 @@
 .buildlog/
 .history
 .svn/
+todo.md
+
+# Environment variables
+.env
 
 # Test Coverage
 coverage
