@@ -7,6 +7,7 @@ Stylish Weather app.
 ## Stack
 
 * Flutter v1.2.1 stable
+* [Open Weather's API](http://openweathermap.org/)
 
 ## Dependencies
 
@@ -34,6 +35,11 @@ Before continue, you need update your brew: `$ brew update`. This can take a con
 
 ### Develop
 
+1. *Before starting the app* You need to make sure you have a API key form the _http://openweathermap.org/_
+1. After you have sign up for you API key:
+  1. Create a `.env` file in the root directory of the project
+  1. Go to the [environment template file](./.env.template) and copy it's content
+  1. Paste it on the `.env` file and replace the template with your API key
 1. Launch your emulator/simulator: `$ flutter emulators --launch <emulator name id>`
 1. Run the app: `$ flutter run`
 
