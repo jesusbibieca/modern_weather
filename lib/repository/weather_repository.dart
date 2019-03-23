@@ -8,5 +8,5 @@ class WeatherRepository {
   final DataApiClient dataApiClient;
 
   Future<Weather> getWeather(String city) async =>
-      dataApiClient.fetchWeather(city);
+      await dataApiClient.fetchWeather(city);
 }

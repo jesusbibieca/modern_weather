@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class Weather {
   Weather(
       {this.cityId,
@@ -11,28 +13,16 @@ class Weather {
       this.pressure,
       this.temperature,
       this.windDeg,
-      this.windSpeed});
+      this.windSpeed})
+      : iconUrl = 'http://openweathermap.org/img/w/$iconId.png';
 
-  final int cityId;
-  final String description;
-  final int humidity;
-  final String iconId;
-  final String main;
-  final double maxTemp;
-  final double minTemp;
-  final String name;
-  final int pressure;
-  final double temperature;
-  final int windDeg;
-  final double windSpeed;
-
-  static Weather fromJson(dynamic json) {
+  factory Weather.fromJson(Map<String, dynamic> json) {
     return Weather(
         cityId: json['id'],
-        description: json['weather']['description'],
+        description: json['weather'][0]['description'],
         humidity: json['main']['humidity'],
-        iconId: json['weather']['icon'],
-        main: json['weather']['main'],
+        iconId: json['weather'][0]['icon'],
+        main: json['weather'][0]['main'],
         maxTemp: json['main']['temp_max'],
         minTemp: json['main']['temp_min'],
         name: json['name'],
@@ -41,4 +31,23 @@ class Weather {
         windDeg: json['wind']['deg'],
         windSpeed: json['wind']['speed']);
   }
+
+  final int cityId;
+  final String description;
+  final int humidity;
+  final String iconId;
+  final String iconUrl;
+  final String main;
+  final num maxTemp;
+  final num minTemp;
+  final String name;
+  final int pressure;
+  final num temperature;
+  final int windDeg;
+  final double windSpeed;
+}
+
+Weather parseWeather(String jsonStr) {
+  final Map<String, dynamic> decodedJson = jsonDecode(jsonStr);
+  return Weather.fromJson(decodedJson);
 }
