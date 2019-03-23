@@ -18,7 +18,7 @@ void main() {
     expect(parsedData.iconUrl, 'http://openweathermap.org/img/w/02d.png');
     expect(parsedData.main, 'Clouds');
     expect(parsedData.maxTemp, 27.22);
-    expect(parsedData.minTemp, 22);
+    expect(parsedData.minTemp, 22.0);
     expect(parsedData.name, 'Santo Domingo');
     expect(parsedData.pressure, 1018);
     expect(parsedData.temperature, 25.3);
