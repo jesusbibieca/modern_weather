@@ -15,7 +15,7 @@ class DataApiClient {
     final http.Response weatherResponse = await this.httpClient.get(url);
 
     if (weatherResponse.statusCode != 200) {
-      throw Exception('error getting weather data');
+      print(Exception('error getting weather data'));
     }
 
     return parseWeather(weatherResponse.body);
